@@ -22,6 +22,6 @@ jobs:
       - name: Deploy
         run: |
           sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.DROPLET_IP }} << EOF
-            cd /path/to/your/application
+            cd /var/www/stradalized
             git pull origin main
           EOF
